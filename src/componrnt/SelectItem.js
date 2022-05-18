@@ -90,12 +90,15 @@ const Selectitem = () => {
             * This method will trigger every time different
             * option is selected.
             */}
+
+
                 <FormControl sx={{ m: 1 }} variant="standard">
 
                     <InputLabel htmlFor="uncontrolled-native">
                         Select
                     </InputLabel>
                     <NativeSelect
+                        id="uncontrolled-native"
                         value={selected}
                         input={<BootstrapInput />}
                         onChange={changeSelectOptionHandler}>
@@ -104,17 +107,24 @@ const Selectitem = () => {
                         <option>Language</option>
                         <option>Data Structure</option>
                     </NativeSelect>
+                </FormControl>
 
+                <FormControl sx={{ m: 1 }} variant="standard">
 
+                    <InputLabel htmlFor="controlled-native">
+                        Type
+                    </InputLabel>
                     <NativeSelect value={selected}
-                        input={<BootstrapInput />} className="mt-3">
+                        id="controlled-native"
+                        input={<BootstrapInput />}>
                         {
                             /** This is where we have used our options variable */
                             options
                         }
-                    </NativeSelect>
 
+                    </NativeSelect>
                 </FormControl>
+
             </form>
         </div >
     );
