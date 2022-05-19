@@ -1,11 +1,12 @@
 import './App.css';
-import SelectItem from './componrnt/SelectItem';
+import CreateSubCategory from './componrnt/Create';
+
 
 function App() {
   return (
     <>
       <div className='container'>
-        <SelectItem />
+        <CreateSubCategory />
       </div>
 
     </>
